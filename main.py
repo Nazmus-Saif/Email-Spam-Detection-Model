@@ -320,51 +320,51 @@ ModeTrainTestBeforeTuning(ExtraTreeClassifier)
 
 
 
-# from sklearn.model_selection import StratifiedKFold, cross_val_score
-# def perform_cross_validation(model, x, y):
-#     # Initialize StratifiedKFold
-#     stratified_kFold = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-#     # Perform cross-validation
-#     cross_val_results = cross_val_score(model, x, y, cv=stratified_kFold, scoring='accuracy')
-#     # Print cross-validation results
-#     print(f'Cross-Validation Results Accuracy: {cross_val_results}')
-#     print(f'Mean Accuracy: {cross_val_results.mean() * 100:.2f}%')
-#     print(f'Standard Deviation: {cross_val_results.std():.4f}\n')
-#
-# print("kFold Result for SGDClassifier Before Parameter Tuning:")
-# perform_cross_validation(SGDClassifier(), X_Vect, Y)
-# print("kFold Result for SGDClassifier After Parameter Tuning:")
-# perform_cross_validation(SGDClassifier(alpha=0.0001, loss='modified_huber', penalty='l2'), X_Vect, Y)
-#
-# print("kFold Result for LogisticRegression Before Parameter Tuning:")
-# perform_cross_validation(LogisticRegression(), X_Vect, Y)
-# print("kFold Result for LogisticRegression After Parameter Tuning:")
-# perform_cross_validation(LogisticRegression(C=10, penalty='l2'), X_Vect, Y)
-#
-# print("kFold Result for MultinomialNB Before Parameter Tuning:")
-# perform_cross_validation(MultinomialNB(), X_Vect, Y)
-# print("kFold Result for MultinomialNB After Parameter Tuning:")
-# perform_cross_validation(MultinomialNB(alpha=1.0), X_Vect, Y)
-#
-# print("kFold Result for BernoulliNB Before Parameter Tuning:")
-# perform_cross_validation(BernoulliNB(), X_Vect, Y)
-# print("kFold Result for BernoulliNB After Parameter Tuning:")
-# perform_cross_validation(BernoulliNB(alpha=0.5, binarize=0.0), X_Vect, Y)
-#
-# print("kFold Result for RidgeClassifier Before Parameter Tuning:")
-# perform_cross_validation(RidgeClassifier(), X_Vect, Y)
-# print("kFold Result for RidgeClassifier After Parameter Tuning:")
-# perform_cross_validation(RidgeClassifier(alpha=1.0, solver='sag'), X_Vect, Y)
-#
-# print("kFold Result for LinearSVC Before Parameter Tuning:")
-# perform_cross_validation(LinearSVC(), X_Vect, Y)
-# print("kFold Result for LinearSVC After Parameter Tuning:")
-# perform_cross_validation(LinearSVC(C=2, loss='hinge'), X_Vect, Y)
+from sklearn.model_selection import StratifiedKFold, cross_val_score
+def perform_cross_validation(model, x, y):
+    # Initialize StratifiedKFold
+    stratified_kFold = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+    # Perform cross-validation
+    cross_val_results = cross_val_score(model, x, y, cv=stratified_kFold, scoring='accuracy')
+    # Print cross-validation results
+    print(f'Cross-Validation Results Accuracy: {cross_val_results}')
+    print(f'Mean Accuracy: {cross_val_results.mean() * 100:.2f}%')
+    print(f'Standard Deviation: {cross_val_results.std():.4f}\n')
 
-# print("kFold Result for ExtraTree Classifier Before Parameter Tuning:")
-# perform_cross_validation(ExtraTreeClassifier(), X_Vect, Y)
-# print("kFold Result for ExtraTree Classifier After Parameter Tuning:")
-# perform_cross_validation(ExtraTreeClassifier(), X_Vect, Y)
+print("kFold Result for SGDClassifier Before Parameter Tuning:")
+perform_cross_validation(SGDClassifier(), X_Vect, Y)
+print("kFold Result for SGDClassifier After Parameter Tuning:")
+perform_cross_validation(SGDClassifier(alpha=0.0001, loss='modified_huber', penalty='l2'), X_Vect, Y)
+
+print("kFold Result for LogisticRegression Before Parameter Tuning:")
+perform_cross_validation(LogisticRegression(), X_Vect, Y)
+print("kFold Result for LogisticRegression After Parameter Tuning:")
+perform_cross_validation(LogisticRegression(C=10, penalty='l2'), X_Vect, Y)
+
+print("kFold Result for MultinomialNB Before Parameter Tuning:")
+perform_cross_validation(MultinomialNB(), X_Vect, Y)
+print("kFold Result for MultinomialNB After Parameter Tuning:")
+perform_cross_validation(MultinomialNB(alpha=1.0), X_Vect, Y)
+
+print("kFold Result for BernoulliNB Before Parameter Tuning:")
+perform_cross_validation(BernoulliNB(), X_Vect, Y)
+print("kFold Result for BernoulliNB After Parameter Tuning:")
+perform_cross_validation(BernoulliNB(alpha=0.5, binarize=0.0), X_Vect, Y)
+
+print("kFold Result for RidgeClassifier Before Parameter Tuning:")
+perform_cross_validation(RidgeClassifier(), X_Vect, Y)
+print("kFold Result for RidgeClassifier After Parameter Tuning:")
+perform_cross_validation(RidgeClassifier(alpha=1.0, solver='sag'), X_Vect, Y)
+
+print("kFold Result for LinearSVC Before Parameter Tuning:")
+perform_cross_validation(LinearSVC(), X_Vect, Y)
+print("kFold Result for LinearSVC After Parameter Tuning:")
+perform_cross_validation(LinearSVC(C=2, loss='hinge'), X_Vect, Y)
+
+print("kFold Result for ExtraTree Classifier Before Parameter Tuning:")
+perform_cross_validation(ExtraTreeClassifier(), X_Vect, Y)
+print("kFold Result for ExtraTree Classifier After Parameter Tuning:")
+perform_cross_validation(ExtraTreeClassifier(), X_Vect, Y)
 
 
 
